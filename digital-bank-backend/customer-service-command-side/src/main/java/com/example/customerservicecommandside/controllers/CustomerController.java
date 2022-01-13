@@ -20,8 +20,9 @@ public class CustomerController {
     private CommandGateway commandGateway;
     private EventStore eventStore;
 
-    public CustomerController(CommandGateway commandGateway) {
+    public CustomerController(CommandGateway commandGateway,EventStore eventStore) {
         this.commandGateway = commandGateway;
+        this.eventStore = eventStore;
     }
 
     @PostMapping("/create")
